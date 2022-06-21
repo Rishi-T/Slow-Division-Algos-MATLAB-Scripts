@@ -9,10 +9,19 @@ n=log2(x);
 			else
 				n=ceil(n);
 			end%if
+		
+m=log2(y);
+			if y==0
+				m=1;
+			elseif m==floor(m)
+				m=m+1;
+			else
+				m=ceil(m);
+			end%if
 
 Q = fi(x,0,n,0,'OverflowAction','Wrap');
-M = fi(y,0,n,0);
-A = fi(0,0,8,0,'OverflowAction','Wrap');
+M = fi(y,0,m,0);
+A = fi(0,0,m+1,0,'OverflowAction','Wrap');
 
 fprintf('n  M ')
 for c = 1:n
