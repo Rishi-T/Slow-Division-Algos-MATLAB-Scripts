@@ -12,7 +12,7 @@ n=log2(x);
 
 Q = fi(x,0,n,0,'OverflowAction','Wrap');
 M = fi(y,0,n,0);
-A = fi(0,0,8,0,'OverflowAction','Wrap');
+A = fi(0,1,8,0,'OverflowAction','Wrap');
 
 fprintf('n  M ')
 for c = 1:n
